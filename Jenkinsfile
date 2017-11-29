@@ -14,7 +14,7 @@ pipeline {
 
           steps{
               script{
-                name=basetrade-`date +%Y-%m-%d-%H-%M-%S`.tgz
+                name=sh( script: 'echo basetrade-`date +%Y-%m-%d-%H-%M-%S`.tgz', returnStdout: true).trim()
                 echo "${name}"
               }
             }
