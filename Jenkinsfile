@@ -13,7 +13,7 @@ pipeline {
 
 
           steps{
-              sh 'printenv'
+              echo "Performing PnL"
             }
           }
 
