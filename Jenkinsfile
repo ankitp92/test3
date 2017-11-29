@@ -13,7 +13,10 @@ pipeline {
 
 
           steps{
-              echo "Performing PnL"
+              script{
+                name="basetrade-`date +%Y-%m-%d-%H-%M-%S`.tgz"
+                echo "${name}"
+              }
             }
           }
 
