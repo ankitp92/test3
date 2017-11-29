@@ -16,7 +16,7 @@ pipeline {
               script{
                 name=sh( script: 'echo basetrade-`date +%Y-%m-%d-%H-%M-%S`.tgz', returnStdout: true).trim()
                 echo "${name}"
-                a="[\n{ "name": "basetrade",\n"bucket": "dvc-artifactory",\n"key": "${name}"\n}\n]"
+                a="[ { "name": "basetrade","bucket": "dvc-artifactory", "key": "${name}" } ]"
                 echo "Here"
                 git checkout master
                 echo "Here"
