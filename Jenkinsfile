@@ -14,7 +14,7 @@ pipeline {
 
           steps{
               script{
-                name="basetrade-`date +%Y-%m-%d-%H-%M-%S`.tgz"
+                name=basetrade-`date +%Y-%m-%d-%H-%M-%S`.tgz
                 echo "${name}"
               }
             }
