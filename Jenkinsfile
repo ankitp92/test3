@@ -23,7 +23,7 @@ pipeline {
                 echo "Here"
                 sh "echo \"${a}\" > README.md"
                 echo "Here"
-                sh 'git add'
+                sh 'git add .'
                 echo "Here"
                 sh 'git commit -m "Update"'
                 echo "Here"
