@@ -27,7 +27,7 @@ pipeline {
                 echo "Here"
                 sh 'git commit -m "Update"'
                 echo "Here"
-                git push
+                sh 'git push'
               }
             }
           }
