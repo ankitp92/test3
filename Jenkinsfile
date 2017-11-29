@@ -16,8 +16,9 @@ pipeline {
 
                 sh 'printenv'
                 result = sh (script: "git log -1 | grep '\\[ci skip\\]'", returnStatus: true)
-                echo result
+
                 if ( result!=0 ){
+                  echo $result
                   echo "Performing build"
                 }else {
                   echo "Not performing build"
