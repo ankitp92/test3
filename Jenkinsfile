@@ -19,13 +19,13 @@ pipeline {
                 a=sh( script: "echo \"[ { \"name\": \"basetrade\", \"bucket\": \"dvc-artifactory\", \"key\": \"${name}\" } ]\"", returnStdout: true).trim()
                 echo "${a}"
                 echo "Here"
-                git checkout master
+                sh 'git checkout master'
                 echo "Here"
-                echo "${a}" > README.md
+                sh "echo \"${a}\" > README.md"
                 echo "Here"
-                git add
+                sh 'git add'
                 echo "Here"
-                git commit -m "Update"
+                sh 'git commit -m "Update"'
                 echo "Here"
                 git push
               }
