@@ -18,7 +18,7 @@ pipeline {
                 echo "${name}"
                 a="[\n{ "name": "basetrade",\n"bucket": "dvc-artifactory",\n"key": "${name}"\n}\n]"
                 git checkout master
-                sh "echo "${a}" > README.md"
+                echo "${a}" > README.md
                 git -am 'Updated basetrade version'
                 git push
 
