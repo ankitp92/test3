@@ -1,13 +1,17 @@
 pipeline {
     agent any
 
+    parameters {
+      string( defaultValue:'0', description:'', name:'JOB_TRIGGER')
+      string( defaultValue:'0', description:'', name:'SKIP_PnL')
+    }
 
     stages {
         stage('build') {
 
           when {
             expression {
-              return params.SKIP_PnL=="0"
+              return "${SKIP_PnL}"=="1"
             }
           }
 
